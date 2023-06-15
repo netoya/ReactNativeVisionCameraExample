@@ -71,7 +71,7 @@ const App = () => {
     if (cameraRef.current) {
       const photo = await cameraRef.current.takePhoto({
         qualityPrioritization: 'quality',
-        orientation: 'portrait',
+        skipMetadata: true,
       });
 
       console.log({path: photo.path});
